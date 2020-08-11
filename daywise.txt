@@ -1,0 +1,40 @@
+
+Day-1
+Microservices creations
+Day -2
+Microservices communication with Rest Template (JMS with Rabbit MQ)
+
+Day-3
+Microservices local git configuration 
+
+Day-4
+Microservices Config Server and Client (Globalizing configutation using git)
+git url : https://github.com/ctsjava
+-----------------------------------
+Notes:
+login with user name : ctsjava
+password: 
+----------------------------------
+
+Day - 5
+Cloud Bus
+
+
+Spring Cloud services with micro services configuration
+----------------------------------------------------------
+Day -6
+Microservices communications with Feign
+Day-7
+Micro services discovery with Eureka
+day-8
+Load balancing with Ribbon
+day -9
+Circuit breaker with Hysterix
+
+day-10
+cloud support with AWS / spring booy cloud admin console
+
+
+
+
+
