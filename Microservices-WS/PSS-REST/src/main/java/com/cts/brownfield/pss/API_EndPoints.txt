@@ -1,0 +1,1024 @@
+Create/save Airlines and its flight information
+POST Mapping
+http://localhost:8080/api/pss//airline/addAirlines
+Request Body: JSON type
+ [
+    {
+        "nameOfAirline": "Air India",
+        "airlineLogo": "airindia.png",
+        "info": [
+            {
+                "flightNumber": "AI-840",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "AI-850",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "AI-860",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "AI-870",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    },
+    {
+        "nameOfAirline": "Indigo",
+        "airlineLogo": "indigo.png",
+        "info": [
+            {
+                "flightNumber": "6E-6684",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "6E-6685",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "6E-6686",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "6E-6687",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    },
+    {
+        "nameOfAirline": "Air Asia",
+        "airlineLogo": "air-asia.png",
+        "info": [
+            {
+                "flightNumber": "I5-755",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "I5-756",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "I5-757",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "I5-758",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    },
+    {
+        "nameOfAirline": "Spicejet",
+        "airlineLogo": "spicejet.png",
+        "info": [
+            {
+                "flightNumber": "SG-432",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "SG-433",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "SG-434",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "SG-435",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    },
+    {
+        "nameOfAirline": "Vistara",
+        "airlineLogo": "vistara.png",
+        "info": [
+            {
+                "flightNumber": "UK-830",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "UK-831",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "UK-832",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "UK-833",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    },
+    {
+        "nameOfAirline": "Trujet",
+        "airlineLogo": "truejet.png",
+        "info": [
+            {
+                "flightNumber": "2T-518",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "2T-519",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "2T-520",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "2T-521",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    },
+    {
+        "nameOfAirline": "GoAir",
+        "airlineLogo": "goair.png",
+        "info": [
+            {
+                "flightNumber": "G8-424",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "G8-425",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "G8-426",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            },
+            {
+                "flightNumber": "G8-427",
+                "flightType": "Airbus",
+                "numberofSeats": 150
+            }
+        ]
+    }
+]
+
+------------------------------------------------------------------------------------------------
+
+
+Schedule Flights
+POST Mapping
+http://localhost:8080/api/pss/flights/scheduleFlights
+Request Body :: JSON type
+[
+    {
+       
+        "flightNumber": "AI-840",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "02:12:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+          
+            "fare": 4500,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "AI-840",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+        
+        "flightNumber": "AI-850",
+        "origin": "DELHI",
+        "destination": "HYDERABAD",
+        "flightDate": "2020-08-21",
+        "flightTime": "01:15:00",
+        "duration": "2 hrs 45 mins",
+        "fares": {
+           
+            "fare": 3500,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "AI-850",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "AI-860",
+        "origin": "CHENNAI",
+        "destination": "MUMBAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "02:30:00",
+        "duration": "2 hrs 50 mins",
+        "fares": {
+           
+            "fare": 5000,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "AI-860",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "AI-870",
+        "origin": "PUNE",
+        "destination": "HYDERABAD",
+        "flightDate": "2020-08-21",
+        "flightTime": "02:45:00",
+        "duration": "1 hrs 45 mins",
+        "fares": {
+           
+            "fare": 2546,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+            
+            "flightNumber": "AI-870",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+        
+        "flightNumber": "6E-6684",
+        "origin": "CHENNAI",
+        "destination": "PORTBLAIR",
+        "flightDate": "2020-08-21",
+        "flightTime": "03:00:00",
+        "duration": "3 hrs 00 mins",
+        "fares": {
+          
+            "fare": 7500,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "6E-6684",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "6E-6685",
+        "origin": "BENGULURU",
+        "destination": "DELHI",
+        "flightDate": "2020-08-21",
+        "flightTime": "03:15:00",
+        "duration": "3 hrs 15 mins",
+        "fares": {
+            
+            "fare": 10000,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "6E-6685",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+      
+        "flightNumber": "6E-6686",
+        "origin": "DELHI",
+        "destination": "PUNE",
+        "flightDate": "2020-08-21",
+        "flightTime": "03:15:00",
+        "duration": "4 hrs 07 mins",
+        "fares": {
+           
+            "fare": 7438,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+            
+            "flightNumber": "6E-6686",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "6E-6687",
+        "origin": "HYDERABAD",
+        "destination": "MANGALORE",
+        "flightDate": "2020-08-21",
+        "flightTime": "03:15:00",
+        "duration": "3 hrs 30 mins",
+        "fares": {
+           
+            "fare": 8743,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "6E-6687",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "I5-755",
+        "origin": "MUMBAI",
+        "destination": "AHMADABAD",
+        "flightDate": "2020-08-21",
+        "flightTime": "04:30:00",
+        "duration": "6 hrs 00 mins",
+        "fares": {
+          
+            "fare": 1955,
+            "currency": "INR"
+        },
+        "inventory": {
+          
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "I5-755",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "I5-756",
+        "origin": "HYDERABAD",
+        "destination": "KOLKATA",
+        "flightDate": "2020-08-21",
+        "flightTime": "04:45:00",
+        "duration": "3 hrs 15 mins",
+        "fares": {
+           
+            "fare": 2500,
+            "currency": "INR"
+        },
+        "inventory": {
+          
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "I5-756",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "I5-757",
+        "origin": "KOLKATA",
+        "destination": "DELHI",
+        "flightDate": "2020-08-21",
+        "flightTime": "07:45:00",
+        "duration": "1 hrs 00 mins",
+        "fares": {
+          
+            "fare": 4943,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "I5-757",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+        
+        "flightNumber": "SG-434",
+        "origin": "DELHI",
+        "destination": "MUMBAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:45:00",
+        "duration": "1 hrs 00 mins",
+        "fares": {
+           
+            "fare": 4943,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+            
+            "flightNumber": "SG-434",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+      
+        "flightNumber": "SG-435",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "02:45:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            
+            "fare": 4500,
+            "currency": "INR"
+        },
+        "inventory": {
+         
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "SG-435",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "UK-830",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "10:15:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+           
+            "fare": 6200,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+          
+            "flightNumber": "UK-830",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "UK-831",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:30:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+           
+            "fare": 5000,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "UK-831",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "UK-832",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:55:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+         
+            "fare": 1200,
+            "currency": "INR"
+        },
+        "inventory": {
+            
+            "count": 120
+        },
+        "flightInfo": {
+           
+            "flightNumber": "UK-832",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "UK-833",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:55:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+        
+            "fare": 1389,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+          
+            "flightNumber": "UK-833",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+      
+        "flightNumber": "2T-518",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "10:15:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+          
+            "fare": 11000,
+            "currency": "INR"
+        },
+        "inventory": {
+           
+            "count": 100
+        },
+        "flightInfo": {
+           
+            "flightNumber": "2T-518",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "2T-519",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "19:35:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+          
+            "fare": 15000,
+            "currency": "INR"
+        },
+        "inventory": {
+         
+            "count": 100
+        },
+        "flightInfo": {
+          
+            "flightNumber": "2T-519",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+      
+        "flightNumber": "2T-519",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-24",
+        "flightTime": "06:15:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            
+            "fare": 3000,
+            "currency": "INR"
+        },
+        "inventory": {
+          
+            "count": 100
+        },
+        "flightInfo": {
+          
+            "flightNumber": "2T-519",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    },
+    {
+       
+        "flightNumber": "2T-520",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-24",
+        "flightTime": "22:45:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+           
+            "fare": 9000,
+            "currency": "INR"
+        },
+        "inventory": {
+         
+            "count": 100
+        },
+        "flightInfo": {
+          
+            "flightNumber": "2T-520",
+            "flightType": "Airbus",
+            "numberofSeats": 150
+        }
+    }
+]
+
+-------------------------------------------------------------------------------------------------------------
+
+Display all airlines schedules flights for all dates
+GET Mapping
+http://localhost:8080/api/pss/flights
+---------------------------------------------------------------------------------------------------------------
+
+
+
+
+Search Flight by Origin, destination, date and number of passengers
+GET request
+http://localhost:8080/api/pss/find/DELHI/CHENNAI/2020-08-21/3
+Response
+[
+    {
+        "id": 72,
+        "flightNumber": "SG-435",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "02:45:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 73,
+            "fare": 4500,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 74,
+            "count": 96
+        }
+    },
+    {
+        "id": 75,
+        "flightNumber": "UK-830",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "10:15:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 76,
+            "fare": 6200,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 77,
+            "count": 87
+        }
+    },
+    {
+        "id": 78,
+        "flightNumber": "UK-831",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:30:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 79,
+            "fare": 5000,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 80,
+            "count": 82
+        }
+    },
+    {
+        "id": 81,
+        "flightNumber": "UK-832",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:55:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 82,
+            "fare": 1200,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 83,
+            "count": 120
+        }
+    },
+    {
+        "id": 84,
+        "flightNumber": "UK-833",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "11:55:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 85,
+            "fare": 1389,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 86,
+            "count": 96
+        }
+    },
+    {
+        "id": 87,
+        "flightNumber": "2T-518",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "10:15:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 88,
+            "fare": 11000,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 89,
+            "count": 95
+        }
+    },
+    {
+        "id": 90,
+        "flightNumber": "2T-519",
+        "origin": "DELHI",
+        "destination": "CHENNAI",
+        "flightDate": "2020-08-21",
+        "flightTime": "19:35:00",
+        "duration": "2 hrs 15 mins",
+        "fares": {
+            "id": 91,
+            "fare": 15000,
+            "currency": "INR"
+        },
+        "inventory": {
+            "id": 92,
+            "count": 98
+        }
+    }
+]
+
+---------------------------------------------------------------------
+
+Find Flight by ID and Number of passengers
+GET request
+http://localhost:8080/api/pss/find/39/5
+Response
+{
+    "id": 39,
+    "flightNumber": "AI-850",
+    "origin": "DELHI",
+    "destination": "HYDERABAD",
+    "flightDate": "2020-08-21",
+    "flightTime": "01:15:00",
+    "duration": "2 hrs 45 mins",
+    "fares": {
+        "id": 40,
+        "fare": 3500,
+        "currency": "INR"
+    },
+    "inventory": {
+        "id": 41,
+        "count": 49
+    }
+}
+
+---------------------------------------------------------------------
+
+Book  flight by flight id and number of passengers
+POST Mapping
+http://localhost:8080/api/pss/book/39/3
+Request Body : JSOn Type
+{
+	"firstName":"Praveen",
+	"lastName":"Reddy",
+	"gender":"Male",
+	"mobileNumber":9876876235,
+	"emailAddress":"abc@abc.com",
+	"coPassengers":
+	    [
+	    	{
+	    	  "firstName":"Passenger1",
+	          "lastName":"Passenger1_lastname",
+              "gender":"Male"
+	    	},
+	    	{
+	    	  "firstName":"Passenger2",
+	          "lastName":"Passenger2_lastname",
+              "gender":"Female"
+	    	}
+		]
+}
+
+Response
+{
+    "passengerId": 268,
+    "firstName": "Praveen",
+    "lastName": "Reddy",
+    "gender": "Male",
+    "mobileNumber": 9876876235,
+    "emailAddress": "abc@abc.com",
+    "coPassengers": [
+        {
+            "copassengerId": 270,
+            "firstName": "Passenger1",
+            "lastName": "Passenger1_lastname",
+            "gender": "Male"
+        },
+        {
+            "copassengerId": 271,
+            "firstName": "Passenger2",
+            "lastName": "Passenger2_lastname",
+            "gender": "Female"
+        }
+    ],
+    "bookingRecord": {
+        "bookingId": 269,
+        "flightNumber": "AI-850",
+        "origin": "DELHI",
+        "destination": "HYDERABAD",
+        "flightDate": "2020-08-21",
+        "flightTime": "01:15:00",
+        "bookingDate": "2020-08-08T00:22:38.613",
+        "fare": 10500,
+        "status": "Confirmed"
+    }
+}
+
+---------------------------------------------------------------------------------------------------------
+Checkin a passenger using booking id
+POST mapping
+http://localhost:8080/api/pss/checkin/269
+No Request body required
+Response
+{
+    "checkinId": 812,
+    "checkinTime": "2020-08-08T07:32:51",
+    "seatNumber": "F4",
+    "flightNumber": "AI-850",
+    "bookingId": 269,
+    "passenger": {
+        "passengerId": 268,
+        "firstName": "Praveen",
+        "lastName": "Reddy",
+        "gender": "Male",
+        "mobileNumber": 9876876235,
+        "emailAddress": "abc@abc.com",
+        "coPassengers": [
+            {
+                "copassengerId": 270,
+                "firstName": "Passenger1",
+                "lastName": "Passenger1_lastname",
+                "gender": "Male"
+            },
+            {
+                "copassengerId": 271,
+                "firstName": "Passenger2",
+                "lastName": "Passenger2_lastname",
+                "gender": "Female"
+            }
+        ],
+        "bookingRecord": {
+            "bookingId": 269,
+            "flightNumber": "AI-850",
+            "origin": "DELHI",
+            "destination": "HYDERABAD",
+            "flightDate": "2020-08-21",
+            "flightTime": "01:15:00",
+            "bookingDate": "2020-08-08T00:22:39",
+            "fare": 10500,
+            "status": "Confirmed"
+        }
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------
+
+Update Fare
+POST mapping
+http://localhost:8080/api/pss/fare/update/37
+Request Body:: JSON type
+{
+	"id":37,
+	 "fare": 5200
+}
+
+----------------------------------------------------------------------------------------------------------
+
+Find Fare by Fare Id
+GET Mapping
+http://localhost:8080/api/pss/fare/getFare/70
+Response
+{
+    "id": 70,
+    "fare": 4943,
+    "currency": "INR"
+}
+
+----------------------------------------------------------------------------------------------------------
+Validate User
+GET Mapping
+http://localhost:8080/api/pss/validate/praveen/password-1
+Response
+true
+----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
