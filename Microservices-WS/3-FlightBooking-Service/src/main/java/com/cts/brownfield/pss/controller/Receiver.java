@@ -12,7 +12,7 @@ public class Receiver {
 	@Autowired
 	private BookingService bookingSerice;
 
-	@RabbitListener(queues = "CheckINQ")
+	@RabbitListener(queues = "CheckinQ")
 	public void processMessage(long bookingID) {
 		bookingSerice.updateStatus("CHECKED-IN", bookingID);
 	}

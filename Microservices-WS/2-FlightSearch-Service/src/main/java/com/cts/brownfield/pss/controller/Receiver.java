@@ -19,15 +19,15 @@ public class Receiver {
 	
 	@Bean
 	Queue queue() {
-		return new Queue("SearchQ", false);
+		return new Queue("InventoryQ", false);
 	}
 	
-	@RabbitListener(queues = "SearchQ")
-    public void processMessage(Map<String,Object> fare) {
-        System.out.println("===========> ==== <===========");
-		System.out.println(fare);
-		System.out.println("===========> ==== <===========");
-        searchService.updateInventory((String)fare.get("FLIGHT_NUMBER"),(LocalDate)fare.get("FLIGHT_DATE"),(int)fare.get("NEW_INVENTORY"));
+	//@RabbitListener(queues = "InventoryQ") // Consumer
+    public void processMessage(Map<String,Object> flightObj) {
+        System.out.println("^^ ===========> ==== <=========== ^^");
+		System.out.println(flightObj);
+		System.out.println("vv ===========> ==== <=========== vv");
+        searchService.updateInventory((String)flightObj.get("FLIGHT_NUMBER"),(LocalDate)flightObj.get("FLIGHT_DATE"),(int)flightObj.get("NUMBEROFSEATS_BOOKED"));
        //call repository and update the fare for the given flight
     }	
 	

@@ -15,11 +15,11 @@ public class Sender {
 	
 	@Bean
 	Queue queue() {
-		return new Queue("SearchQ", false);
+		return new Queue("InventoryQ", false);
 	}
 	@Bean
 	Queue queue1() {
-		return new Queue("CheckINQ", false);
+		return new Queue("CheckinQ", false);
 	}
 	
 	/*
@@ -30,7 +30,7 @@ public class Sender {
 	   */
 	
 	public void send(Object map){
-		template.convertAndSend("SearchQ", map);
+		template.convertAndSend("InventoryQ", map);
 	}
 
 }
