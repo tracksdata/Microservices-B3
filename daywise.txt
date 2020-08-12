@@ -16,12 +16,13 @@ login with user name : ctsjava
 password: 
 ----------------------------------
 
-Day - 5
-Cloud Bus
+
 
 
 Spring Cloud services with micro services configuration
 ----------------------------------------------------------
+Day - 5
+Cloud Bus
 Day -6
 Microservices communications with Feign
 Day-7
