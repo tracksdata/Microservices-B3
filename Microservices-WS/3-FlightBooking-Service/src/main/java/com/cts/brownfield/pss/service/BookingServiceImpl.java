@@ -80,7 +80,7 @@ public class BookingServiceImpl implements BookingService {
 		Map<String, Object> bookingDetails = new HashMap<String, Object>();
 		bookingDetails.put("FLIGHT_NUMBER", flight.getFlightNumber());
 		bookingDetails.put("FLIGHT_DATE", flight.getFlightDate());
-		bookingDetails.put("NEW_INVENTORY", numberOfPassengers);
+		bookingDetails.put("NUMBEROFSEATS_BOOKED", numberOfPassengers);
 
 		sender.send(bookingDetails);
 

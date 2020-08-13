@@ -48,11 +48,11 @@ public class CheckinServiceImpl implements CheckinService {
 				checkinObj.setCheckinTime(LocalDateTime.now());
 				checkinObj.setFlightNumber(pass.getBookingRecord().getFlightNumber());
 				checkinObj.setPassenger(pass);
-				checkinObj.setSeatNumber("F4");
+				checkinObj.setSeatNumber("B4");
 
 				checkinDao.save(checkinObj);
 				// Send bookingId to Booking-Service Microservice via RabbitMQ to update the
-				// status to CHECKED_IN
+				// status to CHECKED_IN from Confirmed
 				sender.send(bookingId);
 
 			}

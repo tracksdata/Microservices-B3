@@ -18,11 +18,11 @@ public class Sender {
 
 	@Bean
 	Queue queue() {
-		return new Queue("CheckINQ", false);
+		return new Queue("CheckinQ", false);
 	}
 
 	public void send(Object bookingId) {
-		template.convertAndSend("CheckINQ", bookingId);
+		template.convertAndSend("CheckinQ", bookingId);
 	}
 
 }
