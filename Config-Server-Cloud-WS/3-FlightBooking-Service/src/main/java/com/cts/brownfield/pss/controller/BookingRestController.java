@@ -3,6 +3,7 @@ package com.cts.brownfield.pss.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,27 +20,27 @@ import com.cts.brownfield.pss.service.BookingService;
 @RestController
 @CrossOrigin
 @RequestMapping("/api/pss")
+@RefreshScope
 public class BookingRestController {
 	@Autowired
 	private BookingService bookingService;
-	
+
 	@PostMapping("/book/{id}/{numberofPassengers}")
-	public Passenger bookFlight(@RequestBody Passenger passenger,@PathVariable("id") long id,
+	public Passenger bookFlight(@RequestBody Passenger passenger, @PathVariable("id") long id,
 			@PathVariable("numberofPassengers") int numberofPassengers) {
-		Passenger bookedPassenger=bookingService.bookFlight(passenger, id, numberofPassengers);
+		Passenger bookedPassenger = bookingService.bookFlight(passenger, id, numberofPassengers);
 		List<CoPassenger> coPassengers = passenger.getCoPassengers();
-		
+
 		if (coPassengers != null && passenger.getCoPassengers().size() == numberofPassengers - 1) {
 			return bookedPassenger;
 		}
 
 		return null;
 	}
-	
+
 	@GetMapping("/book/{bookingId}")
 	public BookingRecord getBookingInfo(@PathVariable("bookingId") long bookingId) {
 		return bookingService.getBookingInfo(bookingId);
 	}
-	
 
 }
