@@ -34,7 +34,7 @@ public class SearchRestController {
 	
 	@PostMapping("/findFlights")
 	public List<Flight> searchFlights(@RequestBody SearchQuery searchQuery){
-		System.out.println(">>>>>>>>>>>>>>> Shut down airports ::::: "+originAirportShutdownList);
+		System.out.println(">>>>>>>>>>>>>>> Search-Service :::::: Shut down airports ::::: "+originAirportShutdownList);
 		System.out.println(searchQuery);
         if(Arrays.asList(originAirportShutdownList.split(","))	.contains(searchQuery.getOrigin())) {
             System.out.println("The origin airport is in shutdown state");

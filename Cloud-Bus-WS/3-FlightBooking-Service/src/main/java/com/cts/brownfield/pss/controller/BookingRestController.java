@@ -3,6 +3,7 @@ package com.cts.brownfield.pss.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,12 +23,16 @@ import com.cts.brownfield.pss.service.BookingService;
 @RequestMapping("/api/pss")
 @RefreshScope
 public class BookingRestController {
+	@Value("${coupon.code}")
+	private String couponCode;
+
 	@Autowired
 	private BookingService bookingService;
 
 	@PostMapping("/book/{id}/{numberofPassengers}")
 	public Passenger bookFlight(@RequestBody Passenger passenger, @PathVariable("id") long id,
 			@PathVariable("numberofPassengers") int numberofPassengers) {
+		System.out.println(">>>>>> Booking-Service ::::: Coupon Code::::: " + couponCode);
 		Passenger bookedPassenger = bookingService.bookFlight(passenger, id, numberofPassengers);
 		List<CoPassenger> coPassengers = passenger.getCoPassengers();
 
@@ -40,6 +45,7 @@ public class BookingRestController {
 
 	@GetMapping("/book/{bookingId}")
 	public BookingRecord getBookingInfo(@PathVariable("bookingId") long bookingId) {
+		System.out.println(">>>>>> Booking-Service ::::: Coupon Code::::: " + couponCode);
 		return bookingService.getBookingInfo(bookingId);
 	}
 
